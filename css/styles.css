@@ -1,0 +1,313 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    background-color: white;
+    color: rgb(40, 40, 40);
+    text-align: center;
+}
+
+p {
+    font-size: 1em;
+    font-weight: 300;
+    line-height: 1.5rem;
+}
+
+li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+h2 {
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+}
+
+h4 {
+    font-size: 1.2rem;
+    font-weight: normal;
+    margin: 0 15px;
+}
+
+hr {
+    border:0.5px solid rgb(219, 219, 219);
+    margin: 0 15px;
+    align-self: center;
+}
+
+a:link,
+a:visited,
+a:active {
+    text-decoration: none;
+    color:rgb(40, 40, 40);
+}
+
+a:hover {
+    color:rgb(180, 187, 255);
+}
+
+.name {
+    font-family: 'Roboto', sans-serif
+    font-size: 1.8em;
+}
+
+.main-nav,
+.nav {
+    display: flex;
+    flex-direction: column;
+}
+.main-nav {
+    margin: 20px 15px 10px;
+}
+.nav {
+    margin-top: 30px;
+    text-transform: uppercase;
+}
+
+.nav li {
+    background-color: white;
+    margin: 2.5px 0;
+    padding: 10px 0;
+}
+
+header {
+    margin: 20px 10px;
+    padding: 10px 0 25px;
+}
+
+.profile-image {
+    width: 65%;
+}
+
+.section {
+    padding: 40px 15px 20px;
+    background-color: rgb(238, 236, 238);
+}
+
+.introduction {
+    padding: 20px 5px 0;
+}
+
+.description {
+    color: rgb(66, 66, 66);
+    font-size: 15px;
+    margin: 15px 10px;
+    line-height: normal;
+    min-height: 60px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.portfolio-image {
+    width: 100%;
+    padding:0;
+}
+.portfolio-image {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.contact {
+    padding: 5px 20px 0;
+    margin: 50px 0;
+}
+
+.contact-detail {
+    padding: 8px 0;
+}
+
+.second-nav {
+    display: none;
+}
+
+.footer {
+    padding: 0 15px;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+}
+
+.footer h2 {
+    margin: 0;
+    padding: 25px 0px;
+}
+
+.to-top {
+    font-size: 0.8em;
+    color: rgb(66, 66, 66);
+    font-weight: bold;
+    position: fixed;
+    bottom: 20px;
+    right: 15px;
+}
+
+/* =================================
+  Media Queries
+==================================== */
+@media (min-width: 768px) {
+    .name {
+        font-size: 1.8em;
+    }
+
+    .main-nav {
+        margin-top: 50px;
+        margin-bottom: 20px;
+    }
+
+    .nav {
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 0 250px;
+    }
+
+    .nav li {
+        padding: 10px 20px;
+    }
+
+    .nav li,
+    .second-nav li {
+        background: none;
+    }
+
+    header {
+        display: flex;
+        padding: 25px 30px 60px;
+        margin: 0;
+    }
+    .profile-image {
+        width: 40%;
+        order: 1;
+    }
+
+    .introduction {
+        margin: 0;
+        padding: 0;
+        margin-right: 15px;
+        text-align: left;
+        font-size: 20px;
+        line-height: 1.4em;
+    }
+
+    .section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 20px 50px;
+    }
+
+    .container {
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .col {
+        flex-basis: calc(50% - 14px);
+        margin-bottom: 15px;
+    }
+
+    .description {
+        padding: 0 30px;
+    }
+
+    .contact {
+        align-self: center;
+        padding: 0 100px 20px;
+    }
+
+    .contact-detail {
+        padding-top: 20px;
+        font-size: 1.3em;
+    }
+
+    .footer {
+        margin: 0 20px 30px;
+    }
+
+    .to-top {
+        display: none;
+    }
+
+    .second-nav {
+        display: flex;
+        flex-direction: row;
+        justify-items: center;
+    }
+
+    .second-nav li {
+        align-self: center;
+        padding-left: 30px;
+        margin: 0;
+        font-size: 0.8em;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    body {
+        margin: 0 30px;
+    }
+
+    .main-nav {
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 50px 20px 20px 30px;
+    }
+
+    .name {
+        align-self: center;
+    }
+
+    .nav {
+        margin: 0;
+        padding: 0;
+    }
+
+    .introduction {
+        margin-right: 30px;
+    }
+
+    .section {
+        padding: 60px 20px 40px;
+    }
+    .col {
+        flex-basis: calc(33% - 12px);
+        margin-bottom: 15px;
+    }
+
+    .description {
+        padding: 0;
+    }
+
+    .contact {
+        align-self: center;
+        padding: 0 200px 20px;
+    }
+
+    .contact-detail {
+        padding: 10px 0;
+        font-size: 1.3em;
+    }
+
+    .footer {
+        margin: 0 30px 20px;
+    }
+
+}
